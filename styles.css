@@ -149,38 +149,41 @@ footer p {
 
 .qr-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 2rem;
-  padding-top: 2rem;
+  padding: 2rem 1rem;
   border-top: 1px solid #333;
   animation: fadeIn 1s ease-in forwards;
-  flex-wrap: wrap; /* Ensures responsiveness on small screens */
+  flex-wrap: wrap;
+  text-align: left;
 }
 
 .qr-text {
-  flex: 1;
-  min-width: 200px;
+  flex: 0 1 300px;
+  max-width: 100%;
 }
 
 .qr-text h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--text);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .qr-text p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--subtext);
+  line-height: 1.5;
 }
 
 .qr-code {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .qr-code:hover {
@@ -204,12 +207,16 @@ footer p {
 
   .qr-container {
     flex-direction: column-reverse;
-    align-items: center;
     text-align: center;
   }
 
+  .qr-text {
+    flex: unset;
+  }
+
   .qr-code {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
+    margin-top: 1rem;
   }
 }
