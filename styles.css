@@ -147,6 +147,38 @@ footer p {
   }
 }
 
+.qr-container {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.qr-container h3 {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.qr-container p {
+  font-size: 0.95rem;
+  color: var(--subtext);
+  margin-bottom: 1rem;
+}
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.qr-code:hover {
+  transform: scale(1.05);
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   h1 {
@@ -160,5 +192,10 @@ footer p {
 
   .card {
     padding: 1.2rem;
+  }
+
+  .qr-code {
+    width: 120px;
+    height: 120px;
   }
 }
