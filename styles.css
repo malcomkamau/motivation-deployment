@@ -148,23 +148,31 @@ footer p {
 }
 
 .qr-container {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
   margin-top: 2rem;
-  padding-top: 1.5rem;
+  padding-top: 2rem;
   border-top: 1px solid #333;
   animation: fadeIn 1s ease-in forwards;
+  flex-wrap: wrap; /* Ensures responsiveness on small screens */
 }
 
-.qr-container h3 {
+.qr-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.qr-text h3 {
   font-size: 1.2rem;
   color: var(--text);
   margin-bottom: 0.5rem;
 }
 
-.qr-container p {
+.qr-text p {
   font-size: 0.95rem;
   color: var(--subtext);
-  margin-bottom: 1rem;
 }
 
 .qr-code {
@@ -192,6 +200,12 @@ footer p {
 
   .card {
     padding: 1.2rem;
+  }
+
+  .qr-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
   }
 
   .qr-code {
